@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class ImageDisplay extends AppCompatActivity {
 
@@ -79,6 +82,17 @@ public class ImageDisplay extends AppCompatActivity {
                     ImageView poster = (ImageView)findViewById(R.id.poster);
                     poster.setScaleType(ImageView.ScaleType.FIT_CENTER);
                     poster.setImageResource(posterID[pos]);
+
+                    LayoutInflater inflater = getLayoutInflater();
+                    View toastView = inflater.inflate(R.layout.toast, (ViewGroup)findViewById(R.id.toast_layout_root));
+
+                    TextView txtView1 = (TextView)toastView.findViewById(R.id.txtView1);
+                    txtView1.setText(posterTitle[pos]);
+
+                    Toast toast = new Toast(getApplicationContext());
+                    toast.setDuration(Toast.LENGTH_LONG);
+                    toast.setView(toastView);
+                    toast.show();
                     return false;
                 }
             });
