@@ -52,13 +52,13 @@ public class ResultActivity extends AppCompatActivity {
             if(voteResult[i] == max){
                 if(i == 0){riv1.setImageResource(R.drawable.pic1);}
                 else if(i == 1){riv1.setImageResource(R.drawable.pic2);}
-                else if(i == 1){riv1.setImageResource(R.drawable.pic3);}
-                else if(i == 1){riv1.setImageResource(R.drawable.pic4);}
-                else if(i == 1){riv1.setImageResource(R.drawable.pic5);}
-                else if(i == 1){riv1.setImageResource(R.drawable.pic6);}
-                else if(i == 1){riv1.setImageResource(R.drawable.pic7);}
-                else if(i == 1){riv1.setImageResource(R.drawable.pic8);}
-                else if(i == 1){riv1.setImageResource(R.drawable.pic9);}
+                else if(i == 2){riv1.setImageResource(R.drawable.pic3);}
+                else if(i == 3){riv1.setImageResource(R.drawable.pic4);}
+                else if(i == 4){riv1.setImageResource(R.drawable.pic5);}
+                else if(i == 5){riv1.setImageResource(R.drawable.pic6);}
+                else if(i == 6){riv1.setImageResource(R.drawable.pic7);}
+                else if(i == 7){riv1.setImageResource(R.drawable.pic8);}
+                else if(i == 8){riv1.setImageResource(R.drawable.pic9);}
                 rtv1.setText(imageName[i]);
             }
         }
